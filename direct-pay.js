@@ -41,7 +41,6 @@ function bootup(client){
           errors:response.errors  
         }
       })
-      res.send(JSON.stringify(response))
     })
   })
 
