@@ -1,0 +1,20 @@
+%h2 Confirmation  
+
+%p Awesome! Please confirm that the following details are correct and we will ship to you pronto!
+
+%table
+  %tr
+    %th Name
+    %td= paypalResponse.firstname + paypalResponse.lastname
+  %tr
+    %th Email
+    %td= paypalResponse.email
+  %tr
+    %th Amount
+    %td= paypalResponse.paymentrequest[0].amt
+    
+    
+%form{action:'/final', method:'post'}
+  %input{type:'submit', value:'Pay Now!'}
+  
+      

@@ -1,0 +1,17 @@
+{ "name" : "payment-example-app"
+ ,"main" : "./lib/payment-paypal-payflowpro"
+ ,"description" : "An example application that utilizes the payment-paypal-payflowpro module"
+ ,"version" : "0.0.1"
+ ,"author" : "James R. Carr <james.r.carr@gmail.com>"
+ ,"repository" :
+ {"type" : "git"
+  ,"url" : "http://github.com/jamescarr/payment-example-app"
+ }
+ ,"dependencies":
+    {"paynode": "0.0.1"
+     ,"express": "1.0.0rc"
+     ,"connect":"0.2.3"
+     ,"haml": "0.2.5"
+    }
+ ,"engines" : { "node" : ">=0.1.101" }
+}

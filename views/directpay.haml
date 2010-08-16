@@ -1,0 +1,72 @@
+
+%link{rel:'stylesheet', href:'styles/style.css'}
+
+       
+%h2 Payment Form
+:if errors.length > 0
+  %ul#errors
+    :each error in errors
+      %li= error.longmessage
+  %form{action:'/', method:'post'}
+    %fieldset#personal-info
+      %legend Buyer Information
+      %label 
+        %span First Name
+        %input{type:'text', name:'firstname'}
+      %label 
+        %span  Last Name
+        %input{type:'text', name:'lastname'}
+      %label 
+        %span  Email
+        %input{type:'text', name:'email'}
+      %hr
+      %label 
+        %span  Street
+        %input{type:'text', name:'street'}
+      %label 
+        %span  Street2
+        %input{type:'text', name:'street2'}
+      %label 
+        %span  City
+        %input{type:'text', name:'city'}
+      %label 
+        %span State
+        %input{type:'text', name:'state', size:2}
+      %label 
+        %span Zip Code
+        %input{type:'text', name:'zip', size:10}  
+        
+    %fieldset#card-details
+      %legend Payment Details
+      %fieldset#creditcardtype
+        %legend Credit Card Type
+        %label 
+          %input{type:'radio', name:'creditcardtype', value:'Visa'}
+          Visa
+        %label 
+          %input{type:'radio', name:'creditcardtype', value:'MasterCard'}
+          Mastercard
+        %label 
+          %input{type:'radio', name:'creditcardtype', value:'Discover'}\
+          Discover
+        %label 
+          %input{type:'radio', name:'creditcardtype', value:'Amex'}                              
+          Amex
+      %label
+        %span Card Number
+        %input{type:'text', name:'acct'}
+      %label
+        %span Expiration Date
+        %input{type:'text', name:'expdate', size:6}
+      %label
+        %span CVV 
+        %input{type:'text', name:'cvv2', size:3}
+      %hr  
+      %input{type:'submit', value:'Make Payment'}    
+
+%h4 Test Cards
+%table
+  :each card in cards
+    %tr
+      %td= card.type
+      %td= card.number

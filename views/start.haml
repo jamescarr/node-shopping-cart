@@ -1,0 +1,15 @@
+%h2 Quick Item Checkout
+:if typeof error != 'undefined'
+  %p.error=error
+
+%form{action:'/start', method:'post'}
+  %table
+    :each product in products
+      %tr
+        %td 
+          %input{type:'checkbox', name:'product', value:product.name}
+        %td= product.name
+        %td= product.price
+  
+    %input{type:'submit', value:'Proceed to checkout'}
+

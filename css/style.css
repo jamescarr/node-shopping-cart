@@ -1,0 +1,53 @@
+body{
+  font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+  font-size:12px;
+}
+
+fieldset, #errors{
+  margin:20px;
+  width:70%;
+}
+fieldset{
+  border:solid 2px #b7ddf2; 
+  background:#ebf4fb;
+}
+form{
+  margin: 20px;
+}
+legend{
+  font-size:16px;
+}
+hr{
+  margin:15px;
+  clear:both;
+}
+label{
+  display:block;
+  clear:both;
+}
+label{
+  font-size:12px;
+}
+label span{
+  width:150px;
+  
+}
+label span, label input{
+  display:block;
+  float: left;
+  margin:5px;
+}
+
+#creditcardtype label, #creditcardtype input{
+  display:inline;
+  float:none;
+}
+
+#errors{
+border: 1px solid;
+padding:15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;
+color: #D8000C;
+background-color: #FFBABA;
+}
